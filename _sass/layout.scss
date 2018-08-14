@@ -154,7 +154,7 @@ section {
 	align-items: flex-start;
 }
 
-.image-grid {
+ul.card-group {
 	padding: 0;
 	list-style: none;
 	display: flex;
@@ -162,7 +162,7 @@ section {
 	text-align: center;
 	margin: 0 -20px;
 
-	li {
+	li.card {
 		padding: 0;
 		box-sizing: border-box;
 		width: 100%;
@@ -182,46 +182,32 @@ section {
 			flex: 1 1 30%;
 		}
 
+		.title {
+			font-size: 1.3rem;
+			color: $brand-color;
+		}
+
 		img {
 			min-width: 100%;
+
+			.icon {
+				min-width: 80%;
+			}
+		}
+
+		.description {
+			line-height: 1.2;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0, 0, 0, 0.5);
+			padding: 20px;
 		}
 
 		> a:hover {
 			opacity: 0.9;
 		}
-	}
-
-	.square-image {
-		height: 320px;
-
-		img {
-			min-height: 100%;
-			width: 100%;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translateX(-50%) translateY(-50%);
-		}
-	}
-
-	.details {
-		line-height: 1.2;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0, 0, 0, 0.5);
-		padding: 20px;
-	}
-
-	.name {
-		font-size: 1.3rem;
-		color: $brand-color;
-	}
-
-	.position {
-		margin-top: 5px;
-		color: #fff;
 	}
 
 	.filler {

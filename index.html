@@ -2,42 +2,64 @@
 title: Polysoft
 ---
 
-<section class="hero diagonal">
+<section>
 	<div class="container">
-		<h2 class="editable">We build websites</h2>
-		<p class="subtext editable">This is the <strong>Urban</strong> template from <a href="http://cloudcannon.com/">CloudCannon</a>. Urban is a strong foundation for the web presence of your agency.</p>
-		<p><a class="button alt" href="{{ site.baseurl }}/contact/">Contact Us</a></p>
+		<img src="http://via.placeholder.com/350x150">
+		<p>We build websites.</p>
 	</div>
 </section>
 
-<section class="diagonal patterned">
-	<div class="container halves">
+<section>
+	<div class="container">
+		<h1>Our Work</h1>
+		<ul></ul>
 		<div>
-			<h3 class="editable">Some of our work</h3>
-			<p class="editable">We take pride in our previous work and our happy customers. We cater to any sector to boost business and increase exposure.</p>
-			<p class="editable"><a href="{{ site.baseurl }}/portfolio/">View Full Portfolio &rarr;</a></p>
+			<p>Website Example 1</p>
+			<img src="http://via.placeholder.com/350x300">
+			
 		</div>
 		<div>
-			<ul class="image-grid">
-				{% for client in site.clients limit: 4 %}
-					<li><a href="{{ site.baseurl }}{{ client.url }}"><img src="{% include relative-src.html src=client.image_path %}"></a></li>
-				{% endfor %}
-			</ul>
+			<p>Another Website Example</p>
+			<img src="http://via.placeholder.com/350x300">
 		</div>
+
+		<a href="/portfolio">See More</a>
 	</div>
 </section>
 
-<section class="diagonal alternate">
-	<div class="container halves">
+<section>
+	<div class="container">
+		<h1>Services</h1>
+		<ul class="card-group">
+			<li class="card">
+				<h2 class="title">Web Development</h2>
+				<img src="/images/web-development.svg">
+				<div class="description">
+					<ul>
+						<li>Custom design</li>
+						<li>Responsive &amps; mobile friendly</li>
+						<li>Optimized for speed</li>
+					</ul>
+				</div>
+			</li>
+		
+			<li class="card">
+				<h2 class="title">Hosting</h2>
+				<img src="/images/hosting.svg">
+				<div class="description">
+					<ul>
+						<li>No domain name nassle</li>
+						<li>Includes TSL/SSL security</li>
+						<li>Google Analytics</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		
+
 		<div>
-			<ul class="image-list">
-				<li><img src="{{ site.baseurl }}/images/cloudcannon-logo-blue.svg" width="250" style="margin-bottom: 40px;"></li>
-				<li><img src="{{ site.baseurl }}/images/jekyll-logo-black-red-transparent.png" width="300"></li>
-			</ul>
-		</div>
-		<div>
-			<h3 class="editable">Latest software, greatest perfomance</h3>
-			<p class="editable">As a new agency we get reap the benefits of the latest and greatest. We build our websites with the most up to date technology. This ensures your website is fast, efficient and reliable for many years.</p>
+			<a href="/services">More Info</a>
+			<a href="/contact">Get a Quote</a>
 		</div>
 	</div>
 </section>
