@@ -1,0 +1,21 @@
+title: 
+keywords: >-
+
+url: 
+phone: 
+email: 
+
+exclude: 
+  -
+    _designs
+    
+defaults:
+  - # layout: default
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-sitemap
