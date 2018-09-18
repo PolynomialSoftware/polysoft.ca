@@ -1,8 +1,3 @@
-$min-width: 315px;
-$max-width: 945px;
-$min-height: 555px;
-$max-height: 0px;
-
 body {
     font-family: sans-serif;
     margin: 0;
@@ -21,6 +16,7 @@ h1,h2,h3,h4,h5,h6 {
     min-height: $min-height;
     background-color: #00000055;
     max-width: $max-width;
+    padding: 6px;
 }
 
 .card-deck {
@@ -44,6 +40,7 @@ h1,h2,h3,h4,h5,h6 {
     min-width: $min-width;
 
     .img-top {
+        
         margin: 0 auto;
         width: 125px;
         display: block;
