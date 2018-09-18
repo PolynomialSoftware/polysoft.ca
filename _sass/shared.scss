@@ -19,15 +19,12 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 1em 0;
+    margin: 0;
     text-align: center;
 }
 
 .landing-text {
-    display: block;
     font-size: 2em;
     text-transform: capitalize;
 }
@@ -44,15 +41,11 @@ h1,h2,h3,h4,h5,h6 {
         min-width: $min-width;
     
         .img-top {
-            margin: 0 auto;
             width: 95px;
-            display: block;
         }
     
         .heading {
-            padding-top: 5px;
-            padding-bottom: 5px;
-            display: block;
+            padding: 5px 0;
         }
     
         p.content {
@@ -63,8 +56,7 @@ h1,h2,h3,h4,h5,h6 {
     &.vertical {
         flex-direction: column;
         .card {
-            margin-top: 1.5em;
-            margin-bottom: 1.5em;
+            margin: 1.5em 0;
         }
     }
 }
