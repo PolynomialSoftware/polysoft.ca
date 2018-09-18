@@ -1,0 +1,35 @@
+$min-width: 320px;
+$max-width: 940px;
+$min-height: 560px;
+$max-height: 0px;
+
+body {
+    font-family: sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+
+.container {
+    min-height: $min-height;
+    background-color: #00000055;
+    max-width: $max-width;
+}
+
+.card-deck {
+    margin: 0 auto;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+  
+    &.vertical {
+        flex-direction: column;
+    }
+  }
+    
+  .card {
+    text-align: center;
+    flex: 1;
+    height: 150px;
+  }
