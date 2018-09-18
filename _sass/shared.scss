@@ -12,6 +12,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .container {
+    margin: 0 auto;
     min-height: $min-height;
     background-color: #00000055;
     max-width: $max-width;
@@ -32,4 +33,8 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
     flex: 1;
     height: 150px;
+
+    .img-top {
+        width: 100px;
+    }
   }
