@@ -7,7 +7,15 @@ body {
     height: $min-height;
     background-color: #00000055;
     max-width: $max-width;
-    padding: 6px;
+    padding: 20px 6px;
+}
+
+.center-grid {
+    height: $min-height;
+    display: grid;
+    > * {
+        margin: auto;
+    }
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -18,12 +26,6 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
 }
 
-.center-grid {
-    display: grid;
-    > * {
-        margin: auto;
-    }
-}
 .landing-text {
     display: block;
     font-size: 2em;
@@ -31,32 +33,38 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .card-deck {
-    list-style-type: none;
-    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-
+    .card {
+        margin-top: .5em;
+        margin-bottom: .5em;
+        text-align: center;
+        flex: 1;
+        height: auto;
+        min-width: $min-width;
+    
+        .img-top {
+            margin: 0 auto;
+            width: 95px;
+            display: block;
+        }
+    
+        .heading {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: block;
+        }
+    
+        p.content {
+            margin: 0;
+            padding: 5px 20px;
+        }
+    }
     &.vertical {
         flex-direction: column;
+        .card {
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+        }
     }
-  }
-    
-  .card {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-align: center;
-    flex: 1;
-    height: auto;
-    min-width: $min-width;
-
-    .img-top {
-        margin: 0 auto;
-        width: 95px;
-        display: block;
-    }
-
-    .heading {
-        padding-top: 5px;
-        display: block;
-    }
-  }
+}
