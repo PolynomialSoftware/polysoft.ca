@@ -2,6 +2,13 @@ body {
     font-family: sans-serif;
     margin: 0;
 }
+.container {
+    margin: 0 auto;
+    height: $min-height;
+    background-color: #00000055;
+    max-width: $max-width;
+    padding: 6px;
+}
 
 h1,h2,h3,h4,h5,h6 {
     padding-top: 1em;
@@ -11,16 +18,19 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
 }
 
-.container {
-    margin: 0 auto;
-    min-height: $min-height;
-    background-color: #00000055;
-    max-width: $max-width;
-    padding: 6px;
+.center-grid {
+    display: grid;
+    > * {
+        margin: auto;
+    }
+}
+.landing-text {
+    display: block;
+    font-size: 2em;
+    text-transform: capitalize;
 }
 
 .card-deck {
-    margin: 0 auto;
     list-style-type: none;
     padding-left: 0;
     display: flex;
@@ -36,18 +46,17 @@ h1,h2,h3,h4,h5,h6 {
     margin-bottom: 1em;
     text-align: center;
     flex: 1;
-    height: 150px;
+    height: auto;
     min-width: $min-width;
 
     .img-top {
-        
         margin: 0 auto;
-        width: 125px;
+        width: 95px;
         display: block;
     }
 
     .heading {
-        padding-bottom: 1em;
+        padding-top: 5px;
         display: block;
     }
   }
