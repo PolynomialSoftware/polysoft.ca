@@ -3,8 +3,9 @@
 $min-width: 300px;
 $max-width: 945px;
 $min-height: 555px;
-$max-height: 0px;
+$break-point: 762px;
 
 @import 'shared';
+@import 'recent-work';
 @import 'forms';
 
