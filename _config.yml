@@ -5,8 +5,9 @@ phone:
 email: 
 
 exclude: 
-  -
-    _designs
+  - _designs
+  - Gemfile
+  - Gemfile.lock
     
 defaults:
   - # layout: default
