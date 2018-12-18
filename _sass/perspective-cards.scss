@@ -1,0 +1,23 @@
+/*
+// Example: https://codepen.io/linhub15/pen/VqapXa
+
+<div class="perspective-card">
+  <img class="card" src="" alt=""></img>
+</div>
+
+
+*/
+
+.perspective-card {
+    perspective: 700px;
+
+    img.card {
+        width: 0px;
+        height: 0px;
+        box-shadow: -9px 15px 6px -3px #555;
+        transform:
+            rotateX(36deg)
+            rotate(-20deg)
+            rotateY(10deg);
+    }
+}
