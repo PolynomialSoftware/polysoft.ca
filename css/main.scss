@@ -1,6 +1,7 @@
 ---
 ---
 
+// SCSS Variables
 $min-width: 300px;
 $max-width: 945px;
 $min-height: 555px;
@@ -10,10 +11,6 @@ $color-1: #D28A34;
 $color-2: #D2A934;
 $color-3: #D25234;
 
-@import 'shared';
-@import 'recent-work';
+// SCSS Stylesheets
+@import 'index';
 @import 'forms';
-
-#top {
-    background-color: $color-1;
-}
