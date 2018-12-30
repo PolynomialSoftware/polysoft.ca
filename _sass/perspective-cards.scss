@@ -1,23 +1,83 @@
-/*
-// Example: https://codepen.io/linhub15/pen/VqapXa
+/* Example: https://codepen.io/linhub15/pen/maEYZL */
 
-<div class="perspective-card">
-  <img class="card" src="" alt=""></img>
-</div>
+/*  CHANGE THESE VALUES  */
+$height: 315px;
+$width: 560px;
+$thickness: 10px;
 
-
-*/
+$rotate: -17.5deg;
+$rotate-X: 30deg;
+$rotate-Y: 30deg;
+  
+.scene {
+    display: block;
+    margin: 100px auto;
+    width: $width;
+    perspective: 4000px;
+    filter: drop-shadow(-6px 20px 10px #444);
+}
 
 .perspective-card {
-    perspective: 700px;
+    position: relative;
+    width: $width;
+    height: $height;
 
-    img.card {
-        width: 0px;
-        height: 0px;
-        box-shadow: -9px 15px 6px -3px #555;
-        transform:
-            rotateX(36deg)
-            rotate(-20deg)
-            rotateY(10deg);
-    }
+    transform-style: preserve-3d;
+    transition: transform .6s;
+    transform: 
+        rotate($rotate)
+        rotateX($rotate-X)
+        rotateY($rotate-Y);  
 }
+
+.face {
+    background: #333;
+    position: absolute;
+}
+
+.front {
+    background: #666;
+    width: $width;
+    height: $height;
+    transform: translateZ($thickness / 2);
+}
+
+.back {
+    width: $width;
+    height: $height;
+    transform:
+        rotateY(180deg) 
+        translateZ($thickness / 2);
+} 
+
+.left {
+    width: $thickness;
+    height: $height;
+    transform: 
+        rotateY(-90deg)
+        translateZ(($thickness/2) - $width);
+} 
+
+.right {
+    width: $thickness;
+    height: $height;
+    transform: 
+        rotateY(90deg)
+        translateZ($width - $thickness / 2);
+} 
+
+.top {
+    width: $width;
+    height: $thickness;
+    transform: 
+        rotateX(90deg)
+        translateZ(($thickness/2) - $height);
+}
+
+.bottom {
+    width: $width;
+    height: $thickness;
+    transform: 
+        rotateX(-90deg) 
+        translateZ($height - ($thickness / 2));
+} 
