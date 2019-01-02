@@ -21,7 +21,8 @@ $rotate-Y: 30deg;
 .scene {
     display: block;
     margin: 100px auto;
-    width: $width;
+    width: 100%;
+    max-width: $width;
     perspective: 4000px;
     filter: drop-shadow(-6px 20px 10px #444);
 }
@@ -62,7 +63,6 @@ $rotate-Y: 30deg;
 .left {
     width: $thickness;
     height: $height;
-    // 10px/2 - 315px
     transform: 
         rotateY(-90deg)
         translateZ(#{$thickness/2});
@@ -89,5 +89,65 @@ $rotate-Y: 30deg;
     height: $thickness;
     transform: 
         rotateX(-90deg) 
-        translateZ(#{$height - ($thickness / 2)});
+        translateZ(#{$height - $thickness / 2});
 } 
+
+@media screen and (max-width: 720px) {
+    $height: 150px;
+    $width: 279px;
+    $thickness: 8px;
+    
+
+    .perspective-card {
+        margin-left: auto;
+        margin-right: auto;
+        width: $width;
+        height: $height;
+    }
+
+    .front {
+        width: $width;
+        height: $height;
+        transform: translateZ(#{$thickness / 2});
+    }
+    
+    .back {
+        width: $width;
+        height: $height;
+        transform:
+            rotateY(180deg) 
+            translateZ(#{$thickness / 2});
+    } 
+    
+    .left {
+        width: $thickness;
+        height: $height;
+        transform: 
+            rotateY(-90deg)
+            translateZ(#{$thickness/2});
+    } 
+    
+    .right {
+        width: $thickness;
+        height: $height;
+        transform: 
+            rotateY(90deg)
+            translateZ(#{$width - $thickness / 2});
+    } 
+    
+    .top {
+        width: $width;
+        height: $thickness;
+        transform: 
+            rotateX(90deg)
+            translateZ(#{$thickness/2});
+    }
+    
+    .bottom {
+        width: $width;
+        height: $thickness;
+        transform: 
+            rotateX(-90deg) 
+            translateZ(#{$height - $thickness / 2});
+    } 
+}
