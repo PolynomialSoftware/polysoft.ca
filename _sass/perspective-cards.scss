@@ -11,10 +11,12 @@ $rotate-Y: 30deg;
 
 #freestyleMovement {
     background-image: url("../images/freestyle_movement.jpg");
+    background-size: contain;
 }
 
 #masterJet {
     background-image: url("../images/master_jet.jpg");
+    background-size: contain;
 }
 .scene {
     display: block;
@@ -35,12 +37,10 @@ $rotate-Y: 30deg;
         rotate($rotate)
         rotateX($rotate-X)
         rotateY($rotate-Y);  
-
-    background-size: contain;
 }
 
 .face {
-    background: #333;
+    background-color: #333;
     position: absolute;
 }
 
@@ -48,7 +48,7 @@ $rotate-Y: 30deg;
     background: #666;
     width: $width;
     height: $height;
-    transform: translateZ($thickness / 2);
+    transform: translateZ(#{$thickness / 2});
 }
 
 .back {
@@ -56,15 +56,16 @@ $rotate-Y: 30deg;
     height: $height;
     transform:
         rotateY(180deg) 
-        translateZ($thickness / 2);
+        translateZ(#{$thickness / 2});
 } 
 
 .left {
     width: $thickness;
     height: $height;
+    // 10px/2 - 315px
     transform: 
         rotateY(-90deg)
-        translateZ(($thickness/2) - $width);
+        translateZ(#{$thickness/2});
 } 
 
 .right {
@@ -72,7 +73,7 @@ $rotate-Y: 30deg;
     height: $height;
     transform: 
         rotateY(90deg)
-        translateZ($width - $thickness / 2);
+        translateZ(#{$width - $thickness / 2});
 } 
 
 .top {
@@ -80,7 +81,7 @@ $rotate-Y: 30deg;
     height: $thickness;
     transform: 
         rotateX(90deg)
-        translateZ(($thickness/2) - $height);
+        translateZ(#{$thickness/2});
 }
 
 .bottom {
@@ -88,5 +89,5 @@ $rotate-Y: 30deg;
     height: $thickness;
     transform: 
         rotateX(-90deg) 
-        translateZ($height - ($thickness / 2));
+        translateZ(#{$height - ($thickness / 2)});
 } 
