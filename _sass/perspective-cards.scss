@@ -18,9 +18,9 @@ $rotate-Y: 30deg;
     background-image: url("../images/master_jet.jpg");
     background-size: contain;
 }
+
 .scene {
     display: block;
-    margin: 100px auto;
     width: 100%;
     max-width: $width;
     perspective: 4000px;

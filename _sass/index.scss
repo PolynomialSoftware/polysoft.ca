@@ -4,6 +4,11 @@ body {
 
     p { font-size: 22px; }
 }
+
+.text-center {
+    text-align: center;
+}
+
 .header-area {
     width: 100%; 
     height: 100vh;
@@ -34,13 +39,29 @@ body {
     justify-content: center;
 }
 
+.row {
+    min-height: 150px;
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 50px auto;
+    
+}
+
+@media screen and (min-width: 720px) {
+    .row {
+        margin: 100px auto;
+    }
+}
+
 
 .card {
     width: 93%;    
     max-width: 650px;
-    text-align: center;
-    margin: auto;
+
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
 
     background-color: #ffffff;      
@@ -51,12 +72,11 @@ body {
     position: relative;
     top: -110px; 
 }
+@media screen and (max-height: 321px) { .vertical-offset { top: -15px } }
 
-@media screen and (max-height: 321px) {
-    .vertical-offset {
-        top: -15px;
-    }
-}
+
+/********************/
+/* Adds quotations images before and after the .quote content*/
 
 .quote {
     font-size: 45px;
@@ -75,23 +95,20 @@ body {
     background-image: url(../images/quote-left.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-
-    content: "";
+    content: ""; // required to show quotations
 }
+.quote::after { background-image: url(../images/quote-right.svg) }
 
-.quote::after {
-    background-image: url(../images/quote-right.svg);
+
+/******************************/
+/* _includes/site-footer.html */
+
+footer { background-color: $background-grey }
+
+.copyright {
+    margin: 0;
+    padding: 100px 0;
+
+    text-align: center;        
+    font-style: italic;
 }
-
-footer {
-    background-color: $background-grey;
-
-    P {
-        margin: 0;
-        padding: 100px 0;
-
-        text-align: center;        
-        font-style: italic;
-    }
-}
-
