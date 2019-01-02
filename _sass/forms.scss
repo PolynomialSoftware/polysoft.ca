@@ -1,10 +1,10 @@
 .form-group {
-    margin-top: 10px;
+  margin: 20px auto;
 }
 
 .contact-form {
     max-width: 500px;
-
+    padding-bottom: 20px;
     input {
         box-sizing: border-box;
         width: 100%;
@@ -21,12 +21,23 @@
     width: 5em;
     height: 2em;
 
-    margin: 20px auto;
-    background-image: linear-gradient(to bottom right, #ff0000aa, #0055ddaa);
+    margin-left: auto;
+    margin-right: auto;
+    
+    background-image: linear-gradient(to bottom right, #ff0000dd, #0055dddd);
     border: none;
     border-radius: 1em;
     color: white;
+    transition: all 1s ease-in;
 
     text-align: center;
     font-size: 1.5em;
+}
+
+.btn-submit:hover {
+  background-image: linear-gradient(to bottom right, #ff0000bb, #0055ddbb);
+}
+
+.btn-submit:active {
+  background-image: linear-gradient(to bottom right, #ff0000, #0055dd);
 }
