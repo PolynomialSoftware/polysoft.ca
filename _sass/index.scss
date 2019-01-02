@@ -34,10 +34,8 @@ body {
     justify-content: center;
 }
 
-.section-box {
-    position: relative;
-    top: -110px; 
 
+.card {
     width: 93%;    
     max-width: 650px;
     text-align: center;
@@ -47,19 +45,42 @@ body {
 
     background-color: #ffffff;      
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 6px 20px 0 rgba(0, 0, 0, .1);    
-    
-    h2 {
-        font-size: 45px;
-        font-style: italic;
-        font-weight: normal;
-    }   
+}
 
+.vertical-offset {
+    position: relative;
+    top: -110px; 
 }
 
 @media screen and (max-height: 321px) {
-    .section-box {
+    .vertical-offset {
         top: -15px;
     }
+}
+
+.quote {
+    font-size: 45px;
+    font-style: italic;
+    font-weight: normal;
+}
+.quote::before,
+.quote::after {
+    display: inline-block;
+    width: 20px;
+    height: 1em;
+
+    margin-left: 8px;
+    margin-right: 8px;
+    
+    background-image: url(../images/quote-left.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    content: "";
+}
+
+.quote::after {
+    background-image: url(../images/quote-right.svg);
 }
 
 footer {
