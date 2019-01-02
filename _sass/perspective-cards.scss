@@ -8,7 +8,14 @@ $thickness: 10px;
 $rotate: -17.5deg;
 $rotate-X: 30deg;
 $rotate-Y: 30deg;
-  
+
+#freestyleMovement {
+    background-image: url("../images/freestyle_movement.jpg");
+}
+
+#masterJet {
+    background-image: url("../images/master_jet.jpg");
+}
 .scene {
     display: block;
     margin: 100px auto;
@@ -28,6 +35,8 @@ $rotate-Y: 30deg;
         rotate($rotate)
         rotateX($rotate-X)
         rotateY($rotate-Y);  
+
+    background-size: contain;
 }
 
 .face {
