@@ -1,6 +1,5 @@
 /* Example: https://codepen.io/linhub15/pen/maEYZL */
 
-/*  CHANGE THESE VALUES  */
 $height: 315px;
 $width: 560px;
 $thickness: 10px;
@@ -9,10 +8,12 @@ $rotate: -17.5deg;
 $rotate-X: 30deg;
 $rotate-Y: 30deg;
 
+/* Adds background image to the .front .face of the card*/
 #freestyleMovement {
     background-image: url("../images/freestyle_movement.jpg");
     background-size: contain;
 }
+
 
 #masterJet {
     background-image: url("../images/master_jet.jpg");

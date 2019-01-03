@@ -5,6 +5,11 @@ body {
     p { font-size: 22px; }
 }
 
+h2 {
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+}
 .text-center {
     text-align: center;
 }
@@ -45,12 +50,13 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
     margin: 50px auto;
-    
 }
 
 @media screen and (min-width: 720px) {
     .row {
-        margin: 100px auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
     }
 }
 
@@ -76,7 +82,7 @@ body {
 
 
 /********************/
-/* Adds quotations images before and after the .quote content*/
+/* Adds opening and closing quot images before and after the .quote content*/
 
 .quote {
     font-size: 45px;
