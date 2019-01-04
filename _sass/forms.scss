@@ -24,7 +24,7 @@
     margin-left: auto;
     margin-right: auto;
     
-    background-image: linear-gradient(to bottom right, #ff0000dd, #0055dddd);
+    background-image: linear-gradient(to bottom right, rgba(255,0,0,.8), rgba(0,85,221,.8));
     border: 0 none;
     border-radius: 1em;
     color: white;
@@ -35,9 +35,9 @@
 }
 
 .btn-submit:hover {
-  background-image: linear-gradient(to bottom right, #ff0000bb, #0055ddbb);
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.733), rgba(0, 85, 221, 0.733));
 }
 
 .btn-submit:active {
-  background-image: linear-gradient(to bottom right, #ff0000, #0055dd);
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(0, 85, 221));
 }
