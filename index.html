@@ -49,7 +49,7 @@ description: >-
 
 <div class="row card contact-form">
   <h2 class="text-center">Contact Us</h2>
-  <form action="https://formspree.io/email@example.com" method="POST">
+  <form method="POST">
     <div class="form-group">
       <label for="name">Your Name</label>
       <input id="name" name="name" type="text" placeholder="Your Name">
@@ -65,5 +65,9 @@ description: >-
     <div class="form-group">
       <button class="btn-submit" type="submit">Submit</button>
     </div>
+
+    <input type="hidden" name="_to" value="linhub15@gmail.com">
+    <input type="text" name="_gotcha" style="display: none;">
+    <input type="text" name="_subject" style="display: none;" value="Polysoft.ca Form Submission">
   </form>
 </div>
